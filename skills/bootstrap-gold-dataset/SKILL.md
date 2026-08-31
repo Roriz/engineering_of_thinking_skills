@@ -5,9 +5,9 @@ description: Bootstrap an initial gold dataset for evals from raw data or pipeli
 
 # Bootstrap Gold Dataset (Eval Dataset Creation & Edge-Case Grilling)
 
-Bootstrap a verified, high-quality gold dataset (ground truth) from scratch when preparing to evaluate and tune LLM components, classifiers, extractors, or pipelines with `tune-against-eval`.
+Build a ground-truth dataset from scratch when preparing to evaluate and tune LLM components, extractors, or classifiers with `tune-against-eval`.
 
-This skill bridges the gap from **zero data** to an **eval-ready gold set**: it executes the system across representative inputs, independently analyzes raw source content without relying on the system's own assumptions, drafts ground-truth adjudications, and invokes the **grilling protocol** to resolve edge cases and tricky boundary ambiguities with the user.
+This skill runs the system on sample inputs, evaluates raw source content directly without adopting the system's internal assumptions, drafts initial labels, and uses the grilling protocol to settle edge cases and ambiguous rules with the user.
 
 ---
 
@@ -26,49 +26,49 @@ flowchart TD
 ### Phase 1: Input Sampling & Execution
 
 1. **Stratified Sampling**:
-   - Collect 20–50 representative input items across distinct categories, difficulty tiers (nominal, noisy, complex, adversarial), and edge cases.
-   - Avoid sampling only happy-path examples.
+   - Collect 20 to 50 representative input items across distinct categories, difficulty tiers (nominal, noisy, complex, adversarial), and edge cases.
+   - Do not sample only happy-path examples.
 2. **Execute & Record**:
-   - Run the current system/pipeline on each sampled input.
-   - Capture the complete output payload: `raw_input`, `system_output`, execution time, confidence/logprobs, and raw system metadata.
+   - Run the current system or pipeline on each sampled input.
+   - Capture the full output payload: `raw_input`, `system_output`, execution duration, and system metadata.
 
 ---
 
 ### Phase 2: Independent Expert Adjudication
 
-Do not trust the system's internal reasoning or intermediate representations. Read the **raw input text/source** directly through an independent, critical human/expert lens:
+Read the raw input text directly rather than trusting the system's intermediate output or reasoning:
 
-1. **Draft the True Expected Output (`gold_label`)**:
-   - What *should* the system have produced according to the true intent of the task?
+1. **Draft Expected Output (`gold_label`)**:
+   - What should the system have produced for this input?
 2. **Adjudicate Correctness (`is_correct`)**:
-   - `true`: System output strictly matches the gold standard.
-   - `false`: System output deviates in factual accuracy, extraction completeness, classification, or formatting.
+   - `true`: System output matches the expected standard.
+   - `false`: System output deviates in factual accuracy, extraction completeness, classification, or format.
 3. **Categorize & Tag**:
    - Assign a domain `category_tag` (e.g., `invoice_total`, `negation_query`, `multilingual`).
-   - Assign a `difficulty` level (`easy`, `medium`, `hard`, `adversarial`).
-   - Write a concise `rationale` explaining why the gold label is correct.
+   - Assign a `difficulty` rating (`easy`, `medium`, `hard`, `adversarial`).
+   - Write a short `rationale` explaining the gold label.
 
 ---
 
 ### Phase 3: Contested Edge-Case Clustering
 
-Isolate and cluster all items that fall into the **Ambiguity Frontier**:
-- **System Failure Clashes**: Cases where the system produced an unexpected answer that highlights an underspecified business rule.
-- **Subjective / Borderline Cases**: Inputs where two reasonable humans might disagree on the correct label.
-- **Context Deficits**: Inputs where external domain knowledge or product policy dictates the answer.
+Isolate items in the ambiguity frontier:
+- **System Failure Clashes**: Cases where system failure highlights an unstated business rule.
+- **Subjective / Borderline Cases**: Inputs where reasonable people might choose different labels.
+- **Context Deficits**: Inputs where domain knowledge or product policy dictates the answer.
 
-Group these into a curated list of **Tricky Cases for Grilling**.
+Group these into a concise list of edge cases for grilling.
 
 ---
 
 ### Phase 4: Interactive Grilling on Ambiguities
 
-Invoke the **grilling protocol** (`grilling` skill) to interview the user on all unsettled edge cases.
+Use the grilling protocol (`grilling` skill) to interview the user on unsettled edge cases.
 
 Work through the questions in structured rounds:
-- Present each ambiguous case with the raw input, system output, proposed gold label, and the underlying tradeoff/conflict.
-- Always provide a clear **recommended answer (`➡️`)**.
-- Update the item labels and formalize policy rules based on the user's answers.
+- Present each ambiguous case with the raw input, system output, proposed gold label, and the core tradeoff.
+- Always provide a recommended answer (`➡️`).
+- Update item labels and record policy decisions based on the user's answers.
 
 ```markdown
 ❓ **Q1** - **Edge Case #12 (Invoice Discount Negation)**:
@@ -84,11 +84,11 @@ Work through the questions in structured rounds:
 
 ### Phase 5: Goldset Export & Baseline Telemetry
 
-Once all ambiguities are settled, generate the finalized dataset and output baseline performance metrics.
+After settling all ambiguities, export the dataset and report baseline metrics.
 
-#### 1. Standard Dataset Schema (`goldset.jsonl`)
+#### 1. Dataset Schema (`goldset.jsonl`)
 
-Each line in the exported file must follow this JSON schema:
+Each line in the exported file uses this JSON schema:
 
 ```json
 {
@@ -104,16 +104,16 @@ Each line in the exported file must follow this JSON schema:
 }
 ```
 
-#### 2. Baseline Telemetry Summary
+#### 2. Baseline Summary
 - **Total Samples**: $N$ items
 - **Baseline Accuracy / Pass Rate**: Overall % correct
-- **Error Breakdown by Category**: Precision / Recall / F1 / Error count per `category_tag`
-- **Dominant Failure Bucket**: Identifies the primary cluster of mistakes for subsequent optimization via `tune-against-eval`.
+- **Error Breakdown by Category**: Precision, recall, F1, and error counts per `category_tag`
+- **Dominant Failure Bucket**: Identifies the primary cluster of mistakes to target in `tune-against-eval`.
 
 ---
 
-## Output Handoff
+## Handoff
 
-Once exported, the dataset is immediately compatible with the **`tune-against-eval`** skill:
-1. Save dataset to `evals/<component_name>_goldset.jsonl` (or project-preferred path).
-2. Report the baseline metrics and hand over to `tune-against-eval` with the dominant failure bucket isolated.
+Once exported, hand off directly to `tune-against-eval`:
+1. Save dataset to `evals/<component_name>_goldset.jsonl` (or project path).
+2. Report baseline metrics and state the isolated failure bucket.

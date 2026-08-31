@@ -1,37 +1,35 @@
-# Engineering of Thinking Skills 🧠⚡
+# Engineering of Thinking Skills 🧠
 
-Personal collection of high-leverage agent skills designed for rigorous cognitive engineering, systematic defect remediation, prompt evaluation, gold dataset bootstrapping, UX reverse-engineering, multi-perspective dialectic deliberation, binary adversarial debates, and interactive design-tree stress testing.
-
-Compatible with **Claude Code**, **Google Antigravity / Gemini CLI**, **Agents**, and **Codex**.
+Personal skills for Claude Code, Google Antigravity, Agents, and Codex. Covers prompt evaluation, edge-case grilling, defect triage, UX specs, multi-perspective reviews, and structured debates.
 
 ---
 
 ## 📦 Included Skills
 
-| Skill | Purpose | Primary Triggers / Use Cases |
+| Skill | Purpose | Triggers / Use Cases |
 |---|---|---|
-| [`bootstrap-gold-dataset`](skills/bootstrap-gold-dataset/SKILL.md) | Bootstraps initial gold datasets for evals: runs system on sampled inputs, independently adjudicates raw content, clusters edge cases, grills user on ambiguities, and exports JSONL goldsets | *"create gold dataset"*, *"bootstrap eval data"*, creating test cases for `tune-against-eval` |
-| [`tune-against-eval`](skills/tune-against-eval/SKILL.md) | Iteratively improves prompts and pipeline steps against gold-standard evals via falsifiable hypotheses and isolated single-variable edits | Raising precision/recall/F1, *"why is this failing"*, prompt iteration |
-| [`adversarial-debate`](skills/adversarial-debate/SKILL.md) | Conducts multi-round political/Oxford-style adversarial debate between two options (Player A vs Player B) with opening cases, attacks, counters, and an impartial judge verdict | `/debate`, `/compare`, *"debate A vs B"*, head-to-head comparison, binary technical choices |
-| [`dialectic-consensus`](skills/dialectic-consensus/SKILL.md) | Deliberates complex decisions, tradeoffs, code architectures, or scoring using a 3-perspective jury with contradictory lenses, synthesizing tensions into a reconciled consensus | `/jury`, `/consensus`, *"evaluate with 3 perspectives"*, multi-vision tradeoffs, high-stakes decisions |
-| [`grilling`](skills/grilling/SKILL.md) | Stress-tests plans, ideas, and decisions using an interactive design-tree interview framework | `/grill-me`, *"grill me on this plan"*, stress-testing architecture/decisions |
-| [`humanizer`](skills/humanizer/SKILL.md) | Strips AI-generated writing tells, significance inflation, and robotic sentence patterns based on Wikipedia's AI cleanup guidelines | Editing text to sound natural, human-written, and grounded |
-| [`designer-cognitive`](skills/designer-cognitive/SKILL.md) | Conducts 6-phase cognitive UX audits, JTBD action decomposition, visual hierarchy taxonomies, and redesign grilling | UI redesigns, feature integrations, UX audits |
-| [`defensive-bug-fixing`](skills/defensive-bug-fixing/SKILL.md) | Systematic 6-phase defect remediation workflow (SPEC-ENG-BUG-0042) with Rollbar parsing, 5-Whys RCA, and test-driven fixes | Production failures, Rollbar error JSONs, stack traces, bug fixes |
-| [`ux-reverse-engineering`](skills/ux-reverse-engineering/SKILL.md) | Reverse-engineers descriptive dual-lens UX specifications (cognitive feel + code mechanics) from existing components and screenshots | *"document this feature"*, reverse-engineering UI components |
-| [`create-a-skill`](skills/create-a-skill/SKILL.md) | Standard Operating Procedure (SOP) to turn executed processes and workflows into reusable agent skills | *"turn this into a skill"*, saving repeatable workflows |
+| [`bootstrap-gold-dataset`](skills/bootstrap-gold-dataset/SKILL.md) | Builds an initial eval dataset: runs system inputs, labels ground truth independently, clusters edge cases, and grills on ambiguities | *"create gold dataset"*, *"bootstrap eval data"*, dataset prep for `tune-against-eval` |
+| [`tune-against-eval`](skills/tune-against-eval/SKILL.md) | Improves prompts and pipelines against evals using falsifiable hypotheses and isolated single-variable edits | Improving precision/recall/F1, *"why is this failing"*, prompt tuning |
+| [`adversarial-debate`](skills/adversarial-debate/SKILL.md) | Runs a structured debate between two options (Player A vs Player B) with opening pitches, cross-attacks, counters, and an impartial judge verdict | `/debate`, `/compare`, *"debate A vs B"*, binary comparisons |
+| [`dialectic-consensus`](skills/dialectic-consensus/SKILL.md) | Evaluates complex decisions or scores using a 3-perspective jury bench with competing lenses, synthesizing tensions into a clear consensus | `/jury`, `/consensus`, *"evaluate with 3 perspectives"*, multi-angle reviews |
+| [`grilling`](skills/grilling/SKILL.md) | Stress-tests plans and decisions through an interactive design-tree interview | `/grill-me`, *"grill me on this plan"*, stress-testing architecture |
+| [`humanizer`](skills/humanizer/SKILL.md) | Strips AI writing tells, marketing fluff, and robotic syntax based on Wikipedia's AI cleanup guidelines | Making text sound natural and human-written |
+| [`designer-cognitive`](skills/designer-cognitive/SKILL.md) | Runs 6-phase cognitive UX audits, JTBD action decomposition, hierarchy taxonomies, and redesign grilling | UI redesigns, feature integrations, UX audits |
+| [`defensive-bug-fixing`](skills/defensive-bug-fixing/SKILL.md) | 6-phase defect remediation workflow (SPEC-ENG-BUG-0042) with Rollbar parsing, 5-Whys RCA, and regression tests | Bug fixing, Rollbar error JSONs, stack traces |
+| [`ux-reverse-engineering`](skills/ux-reverse-engineering/SKILL.md) | Reverse-engineers descriptive dual-lens UX specifications (user experience + code mechanics) from existing components and screenshots | *"document this feature"*, reverse-engineering UI components |
+| [`create-a-skill`](skills/create-a-skill/SKILL.md) | Standard process for turning repeatable workflows into new agent skills | *"turn this into a skill"*, saving workflows |
 
 ---
 
 ## 🚀 Installation & Syncing
 
-To symlink these skills into your local agent configuration directories (`~/.agents/skills`, `~/.claude/skills`, `~/.gemini/config/skills`, and `~/.codex/skills`):
+To link these skills into your local agent directories (`~/.agents/skills`, `~/.claude/skills`, `~/.gemini/config/skills`, and `~/.codex/skills`):
 
 ```bash
 ./install.sh
 ```
 
-The script automatically detects active agent environments, removes stale files or older duplicates, and symlinks each skill to the centralized repository source.
+The script symlinks each skill into the active agent folders and removes stale copies.
 
 ---
 
@@ -73,13 +71,13 @@ engineering_of_thinking_skills/
 
 ## 🛠️ Adding a New Skill
 
-1. Create a new directory under `skills/<new-skill-name>/`.
-2. Add a `SKILL.md` file following the frontmatter convention:
+1. Create a directory under `skills/<new-skill-name>/`.
+2. Add a `SKILL.md` with YAML frontmatter:
    ```yaml
    ---
    name: your-skill-name
-   description: Actionable description with explicit trigger phrases.
+   description: What it does and explicit trigger phrases.
    ---
    ```
-3. Run `./install.sh` to update symlinks across all agent environments.
+3. Run `./install.sh` to update symlinks.
 4. Commit and push your changes.
