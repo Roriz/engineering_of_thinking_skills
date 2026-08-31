@@ -1,6 +1,7 @@
 ---
 name: create-a-skill
-description: Turn a process just executed (or described) into a reusable Claude Code skill: grill for the open decisions, then write a terse SKILL.md. Use when the user asks to save or reuse a workflow as a skill, turn a process into a skill, or wants to remember how to do something for next time.
+description: >-
+  Turn a process just executed (or described) into a reusable Claude Code skill: grill for the open decisions, then write a terse SKILL.md. Use when the user asks to save or reuse a workflow as a skill, turn a process into a skill, or wants to remember how to do something for next time.
 ---
 
 # Creating a skill

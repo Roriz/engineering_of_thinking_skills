@@ -1,6 +1,7 @@
 ---
 name: dialectic-consensus
-description: Deliberate complex decisions, trade-offs, architecture proposals, code reviews, or content scoring using a 3-perspective jury bench with contradictory lenses, synthesizing thesis and antithesis into a reconciled consensus. Use when evaluating high-stakes decisions, resolving conflicting architectural tradeoffs, reviewing controversial changes, scoring complex rubrics, or needing multi-vision deliberation.
+description: >-
+  Deliberate complex decisions, trade-offs, architecture proposals, code reviews, or content scoring using a 3-perspective jury bench with contradictory lenses, synthesizing thesis and antithesis into a reconciled consensus. Use when evaluating high-stakes decisions, resolving conflicting architectural tradeoffs, reviewing controversial changes, scoring complex rubrics, or needing multi-vision deliberation.
 ---
 
 # Dialectic Consensus (Tri-Lens Multi-Perspective Deliberation)

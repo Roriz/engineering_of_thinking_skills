@@ -1,6 +1,7 @@
 ---
 name: adversarial-debate
-description: Conduct a structured, multi-round adversarial debate between two competing options, architectures, tools, or strategies (Player A vs Player B). Uses formal debate rounds (opening pitches, direct attacks, counter-arguments, and counter-counter rebuttals) and concludes with an impartial judge verdict. Use for binary comparisons, choosing between two technical approaches, or resolving A vs B dilemmas.
+description: >-
+  Conduct a structured, multi-round adversarial debate between two competing options, architectures, tools, or strategies (Player A vs Player B). Uses formal debate rounds (opening pitches, direct attacks, counter-arguments, and counter-counter rebuttals) and concludes with an impartial judge verdict. Use for binary comparisons, choosing between two technical approaches, or resolving A vs B dilemmas.
 ---
 
 # Adversarial Debate (Binary Head-to-Head Deliberation)

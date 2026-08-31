@@ -1,6 +1,7 @@
 ---
 name: bootstrap-gold-dataset
-description: Bootstrap an initial gold dataset for evals from raw data or pipeline executions. Runs the target system on sampled inputs, extracts system outputs and telemetry, independently inspects raw contents to adjudicate ground-truth labels, clusters tricky/borderline edge cases, and conducts an interactive grilling session with the user to resolve ambiguities before exporting a standardized JSONL goldset ready for tune-against-eval. Use when building a new eval dataset from scratch, labeling test cases, or establishing baseline ground truth.
+description: >-
+  Bootstrap an initial gold dataset for evals from raw data or pipeline executions. Runs the target system on sampled inputs, extracts system outputs and telemetry, independently inspects raw contents to adjudicate ground-truth labels, clusters tricky/borderline edge cases, and conducts an interactive grilling session with the user to resolve ambiguities before exporting a standardized JSONL goldset ready for tune-against-eval. Use when building a new eval dataset from scratch, labeling test cases, or establishing baseline ground truth.
 ---
 
 # Bootstrap Gold Dataset (Eval Dataset Creation and Edge-Case Grilling)

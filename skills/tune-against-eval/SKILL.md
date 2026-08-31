@@ -1,6 +1,7 @@
 ---
 name: tune-against-eval
-description: Iteratively improve a prompt or pipeline step against an existing eval with gold labels or ground truth: read the error breakdown to find the dominant failure bucket, form one falsifiable hypothesis, get cheap debug evidence before spending compute, change exactly one variable, measure with a paired comparison, keep or revert by whether the flip list matches the hypothesis (not the headline number), and document every outcome including reverts. Use when the user wants to raise accuracy, F1, precision, or recall on something measured, asks "why is this failing" about a prompt or classifier, or wants to iterate on quality against an eval or gold set.
+description: >-
+  Iteratively improve a prompt or pipeline step against an existing eval with gold labels or ground truth: read the error breakdown to find the dominant failure bucket, form one falsifiable hypothesis, get cheap debug evidence before spending compute, change exactly one variable, measure with a paired comparison, keep or revert by whether the flip list matches the hypothesis (not the headline number), and document every outcome including reverts. Use when the user wants to raise accuracy, F1, precision, or recall on something measured, asks "why is this failing" about a prompt or classifier, or wants to iterate on quality against an eval or gold set.
 ---
 
 # Tuning against an eval

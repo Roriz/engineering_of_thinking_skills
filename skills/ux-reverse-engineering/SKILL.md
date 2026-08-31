@@ -1,12 +1,7 @@
 ---
 name: ux-reverse-engineering
-description: |
-  Reverse-engineer a descriptive UX specification for one existing feature from whatever
-  evidence is given: screenshot, component path, URL, design file, or any subset.
-  Use for "document this feature", "write a UX spec", "reverse-engineer this screen",
-  "what does this component actually do", or a bare screenshot + path.
-  Do NOT use for redesign, critique, improvement, "make this better", code review, or
-  building a new screen: this skill structurally cannot produce recommendations.
+description: >-
+  Reverse-engineer a descriptive UX specification for one existing feature from whatever evidence is given: screenshot, component path, URL, design file, or any subset. Use for "document this feature", "write a UX spec", "reverse-engineer this screen", "what does this component actually do", or a bare screenshot + path. Do NOT use for redesign, critique, improvement, "make this better", code review, or building a new screen: this skill structurally cannot produce recommendations.
 ---
 
 # UX Reverse-Engineering

@@ -1,6 +1,7 @@
 ---
 name: designer-cognitive
-description: Grill, debate, brainstorm, and audit UI redesigns or new feature integrations using a 6-phase cognitive UX framework and interactive grilling rounds based purely on the given visual baseline (screenshot), spec document, and redesign goal without external codebase distractions.
+description: >-
+  Grill, debate, brainstorm, and audit UI redesigns or new feature integrations using a 6-phase cognitive UX framework and interactive grilling rounds based purely on the given visual baseline (screenshot), spec document, and redesign goal without external codebase distractions.
 ---
 
 # Designer Cognitive (Cognitive UX Redesign and Brainstorming)
