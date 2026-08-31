@@ -1,10 +1,10 @@
-# Engineering of Thinking Skills
+# Engineering of Thinking Skills 🧠
 
 Personal skills for Claude Code, Google Antigravity, Agents, and Codex. Covers prompt evaluation, edge-case grilling, defect triage, UX specs, multi-perspective reviews, and structured debates.
 
 ---
 
-## Included Skills
+## 📦 Included Skills
 
 | Skill | Purpose | Triggers / Use Cases |
 |---|---|---|
@@ -17,11 +17,10 @@ Personal skills for Claude Code, Google Antigravity, Agents, and Codex. Covers p
 | [`designer-cognitive`](skills/designer-cognitive/SKILL.md) | Runs 6-phase cognitive UX audits, JTBD action decomposition, hierarchy taxonomies, and redesign grilling | UI redesigns, feature integrations, UX audits |
 | [`defensive-bug-fixing`](skills/defensive-bug-fixing/SKILL.md) | 6-phase defect remediation workflow (SPEC-ENG-BUG-0042) with Rollbar parsing, 5-Whys RCA, and regression tests | Bug fixing, Rollbar error JSONs, stack traces |
 | [`ux-reverse-engineering`](skills/ux-reverse-engineering/SKILL.md) | Reverse-engineers descriptive dual-lens UX specifications (user experience + code mechanics) from existing components and screenshots | *"document this feature"*, reverse-engineering UI components |
-| [`create-a-skill`](skills/create-a-skill/SKILL.md) | Standard process for turning repeatable workflows into new agent skills | *"turn this into a skill"*, saving workflows |
 
 ---
 
-## Installation and Syncing
+## 🚀 Installation & Syncing
 
 To link these skills into your local agent directories (`~/.agents/skills`, `~/.claude/skills`, `~/.gemini/config/skills`, and `~/.codex/skills`):
 
@@ -33,7 +32,7 @@ The script symlinks each skill into the active agent folders and removes stale c
 
 ---
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```
 engineering_of_thinking_skills/
@@ -44,8 +43,6 @@ engineering_of_thinking_skills/
     ├── adversarial-debate/
     │   └── SKILL.md
     ├── bootstrap-gold-dataset/
-    │   └── SKILL.md
-    ├── create-a-skill/
     │   └── SKILL.md
     ├── defensive-bug-fixing/
     │   ├── SKILL.md
@@ -69,14 +66,15 @@ engineering_of_thinking_skills/
 
 ---
 
-## Adding a New Skill
+## 🛠️ Adding a New Skill
 
 1. Create a directory under `skills/<new-skill-name>/`.
 2. Add a `SKILL.md` with YAML frontmatter:
    ```yaml
    ---
    name: your-skill-name
-   description: What it does and explicit trigger phrases.
+   description: >-
+     What it does and explicit trigger phrases.
    ---
    ```
 3. Run `./install.sh` to update symlinks.

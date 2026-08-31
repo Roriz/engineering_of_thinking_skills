@@ -34,6 +34,17 @@ for target in "${TARGET_DIRS[@]}"; do
   echo ""
   echo "Target: ${target}"
 
+  # Prune broken or removed repo symlinks
+  for existing in "${target}"/*; do
+    [ -L "${existing}" ] || continue
+    target_link="$(readlink -f "${existing}" || true)"
+    if [[ "${target_link}" == "${SKILLS_DIR}"/* ]] && [ ! -d "${target_link}" ]; then
+      echo "  [PRUNED] Removing stale symlink $(basename "${existing}")"
+      rm -f "${existing}"
+    fi
+  done
+
+  # Link active skills
   for skill_path in "${SKILLS_DIR}"/*; do
     [ -d "${skill_path}" ] || continue
     skill_name="$(basename "${skill_path}")"
