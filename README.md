@@ -1,6 +1,6 @@
 # Engineering of Thinking Skills 🧠⚡
 
-Personal collection of high-leverage agent skills designed for rigorous cognitive engineering, systematic defect remediation, prompt evaluation, UX reverse-engineering, multi-perspective dialectic deliberation, binary adversarial debates, and interactive design-tree stress testing.
+Personal collection of high-leverage agent skills designed for rigorous cognitive engineering, systematic defect remediation, prompt evaluation, gold dataset bootstrapping, UX reverse-engineering, multi-perspective dialectic deliberation, binary adversarial debates, and interactive design-tree stress testing.
 
 Compatible with **Claude Code**, **Google Antigravity / Gemini CLI**, **Agents**, and **Codex**.
 
@@ -10,10 +10,11 @@ Compatible with **Claude Code**, **Google Antigravity / Gemini CLI**, **Agents**
 
 | Skill | Purpose | Primary Triggers / Use Cases |
 |---|---|---|
+| [`bootstrap-gold-dataset`](skills/bootstrap-gold-dataset/SKILL.md) | Bootstraps initial gold datasets for evals: runs system on sampled inputs, independently adjudicates raw content, clusters edge cases, grills user on ambiguities, and exports JSONL goldsets | *"create gold dataset"*, *"bootstrap eval data"*, creating test cases for `tune-against-eval` |
+| [`tune-against-eval`](skills/tune-against-eval/SKILL.md) | Iteratively improves prompts and pipeline steps against gold-standard evals via falsifiable hypotheses and isolated single-variable edits | Raising precision/recall/F1, *"why is this failing"*, prompt iteration |
 | [`adversarial-debate`](skills/adversarial-debate/SKILL.md) | Conducts multi-round political/Oxford-style adversarial debate between two options (Player A vs Player B) with opening cases, attacks, counters, and an impartial judge verdict | `/debate`, `/compare`, *"debate A vs B"*, head-to-head comparison, binary technical choices |
 | [`dialectic-consensus`](skills/dialectic-consensus/SKILL.md) | Deliberates complex decisions, tradeoffs, code architectures, or scoring using a 3-perspective jury with contradictory lenses, synthesizing tensions into a reconciled consensus | `/jury`, `/consensus`, *"evaluate with 3 perspectives"*, multi-vision tradeoffs, high-stakes decisions |
 | [`grilling`](skills/grilling/SKILL.md) | Stress-tests plans, ideas, and decisions using an interactive design-tree interview framework | `/grill-me`, *"grill me on this plan"*, stress-testing architecture/decisions |
-| [`tune-against-eval`](skills/tune-against-eval/SKILL.md) | Iteratively improves prompts and pipeline steps against gold-standard evals via falsifiable hypotheses and isolated single-variable edits | Raising precision/recall/F1, *"why is this failing"*, prompt iteration |
 | [`humanizer`](skills/humanizer/SKILL.md) | Strips AI-generated writing tells, significance inflation, and robotic sentence patterns based on Wikipedia's AI cleanup guidelines | Editing text to sound natural, human-written, and grounded |
 | [`designer-cognitive`](skills/designer-cognitive/SKILL.md) | Conducts 6-phase cognitive UX audits, JTBD action decomposition, visual hierarchy taxonomies, and redesign grilling | UI redesigns, feature integrations, UX audits |
 | [`defensive-bug-fixing`](skills/defensive-bug-fixing/SKILL.md) | Systematic 6-phase defect remediation workflow (SPEC-ENG-BUG-0042) with Rollbar parsing, 5-Whys RCA, and test-driven fixes | Production failures, Rollbar error JSONs, stack traces, bug fixes |
@@ -43,6 +44,8 @@ engineering_of_thinking_skills/
 ├── .gitignore
 └── skills/
     ├── adversarial-debate/
+    │   └── SKILL.md
+    ├── bootstrap-gold-dataset/
     │   └── SKILL.md
     ├── create-a-skill/
     │   └── SKILL.md
