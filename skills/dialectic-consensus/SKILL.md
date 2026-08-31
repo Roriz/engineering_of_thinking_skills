@@ -15,20 +15,20 @@ Instead of a single-shot response with single-perspective bias, this skill runs 
 
 ```mermaid
 flowchart TD
-    P1["Phase 1: Lens Calibration<br/>(Select 3 competing domain lenses)"] --> P2["Phase 2: Independent Deliberation<br/>(3 isolated reviews & scoring)"]
+    P1["Phase 1: Lens Calibration<br/>(Select 3 competing domain lenses)"] --> P2["Phase 2: Independent Deliberation<br/>(3 isolated reviews and scoring)"]
     P2 --> P3["Phase 3: Contradiction Mapping<br/>(Thesis vs Antithesis vs Blindspots)"]
-    P3 --> P4["Phase 4: Reconciled Consensus<br/>(Synthesis, Composite Score & Directives)"]
+    P3 --> P4["Phase 4: Reconciled Consensus<br/>(Synthesis, Composite Score, and Directives)"]
 ```
 
 ---
 
-### Phase 1: Lens Selection & Stake Calibration
+### Phase 1: Lens Selection and Stake Calibration
 
 Instantiate three distinct evaluation lenses for the domain. If specific lenses are not requested, generate three perspectives with opposing priorities:
 
-- **Lens 1 (e.g., Velocity & Pragmatism)**: Focuses on implementation speed, simplicity, developer ergonomics, and immediate utility.
-- **Lens 2 (e.g., Reliability & Security)**: Focuses on failure modes, security posture, edge-case vulnerability, operational risk, and maintenance costs.
-- **Lens 3 (e.g., Architecture & Scalability)**: Focuses on domain correctness, structural elegance, system limits, invariant preservation, and future evolution.
+- **Lens 1 (e.g., Velocity and Pragmatism)**: Focuses on implementation speed, simplicity, developer ergonomics, and immediate utility.
+- **Lens 2 (e.g., Reliability and Security)**: Focuses on failure modes, security posture, edge-case vulnerability, operational risk, and maintenance costs.
+- **Lens 3 (e.g., Architecture and Scalability)**: Focuses on domain correctness, structural elegance, system limits, invariant preservation, and future evolution.
 
 *Rule: Every lens must have a distinct priority function. Do not pick lenses that optimize for the same outcome.*
 
@@ -39,10 +39,10 @@ Instantiate three distinct evaluation lenses for the domain. If specific lenses 
 Evaluate the subject through each lens in isolation without early compromise.
 
 For each lens, document:
-1. **Lens Persona & Optimization Goal**: What this perspective prioritizes.
-2. **Strengths & Validated Merits**: Specific elements that succeed under this lens.
-3. **Critical Deviations & Flaws**: Concrete risks, missed edge cases, or violations.
-4. **Lens Verdict & Score (0-100)**:
+1. **Lens Persona and Optimization Goal**: What this perspective prioritizes.
+2. **Strengths and Validated Merits**: Specific elements that succeed under this lens.
+3. **Critical Deviations and Flaws**: Concrete risks, missed edge cases, or violations.
+4. **Lens Verdict and Score (0-100)**:
    - `0-20`: Unacceptable / Fatal flaws
    - `21-40`: Substandard / Heavy risk
    - `41-60`: Average / Needs major mitigation
@@ -51,7 +51,7 @@ For each lens, document:
 
 ---
 
-### Phase 3: Contradiction & Tension Mapping
+### Phase 3: Contradiction and Tension Mapping
 
 Compare the three deliberations and map the friction points:
 
@@ -63,17 +63,17 @@ Compare the three deliberations and map the friction points:
 
 ---
 
-### Phase 4: Synthesis & Reconciled Consensus
+### Phase 4: Synthesis and Reconciled Consensus
 
 Synthesize the findings into a clear decision.
 
-1. **Composite Score & Verdict**:
-   - Provide a final aggregated score (0–100) and explicit verdict (`Approved`, `Approved with Guardrails`, or `Rejected`).
+1. **Composite Score and Verdict**:
+   - Provide a final aggregated score (0-100) and explicit verdict (`Approved`, `Approved with Guardrails`, or `Rejected`).
    - The final score is a weighted synthesis that penalizes unaddressed critical risks from any single lens, rather than a naive arithmetic average.
 2. **Synthesis Rationale**:
    - Explain how the core contradictions are balanced.
    - Clarify which trade-offs are accepted and why.
-3. **Actionable Directives & Guardrails**:
+3. **Actionable Directives and Guardrails**:
    - Concrete, numbered modifications required to satisfy the consensus and mitigate risks.
 
 ---
@@ -109,14 +109,14 @@ Synthesize the findings into a clear decision.
 
 ---
 
-## 3. Contradiction & Tension Matrix
+## 3. Contradiction and Tension Matrix
 - **Shared Consensus**: [Where all lenses align]
 - **Core Clashes**: [Direct tradeoffs between Lens X and Lens Y]
 - **Isolated Blind Spots**: [Critical warnings from a single lens]
 
 ---
 
-## 4. Reconciled Consensus & Directives
+## 4. Reconciled Consensus and Directives
 - **Final Consensus Score**: [Composite Score / 100]
 - **Overall Verdict**: [Approved | Approved with Guardrails | Rejected]
 - **Synthesis**: [How the tension is resolved]

@@ -15,15 +15,15 @@ Instead of a shallow pros-and-cons list, this skill runs structured rounds of ar
 
 ```mermaid
 flowchart TD
-    P1["Phase 1: Framing & Criteria<br/>(Define Player A, Player B & Decision Criteria)"] --> P2["Phase 2: Opening Positions<br/>(Player A Pitch vs. Player B Pitch)"]
-    P2 --> P3["Phase 3: Attack & Counter-Attack<br/>(Player A Attack ➔ Player B Defense & Counter)"]
-    P3 --> P4["Phase 4: Final Rebuttals<br/>(Player A Counter-Counter ➔ Player B Closing Punch)"]
-    P4 --> P5["Phase 5: Impartial Judge Adjudication<br/>(Declared Winner, Trade-off Matrix & Boundary Conditions)"]
+    P1["Phase 1: Framing and Criteria<br/>(Define Player A, Player B, and Decision Criteria)"] --> P2["Phase 2: Opening Positions<br/>(Player A Pitch vs. Player B Pitch)"]
+    P2 --> P3["Phase 3: Attack and Counter-Attack<br/>(Player A Attack -> Player B Defense and Counter)"]
+    P3 --> P4["Phase 4: Final Rebuttals<br/>(Player A Counter-Counter -> Player B Closing Punch)"]
+    P4 --> P5["Phase 5: Impartial Judge Adjudication<br/>(Declared Winner, Trade-off Matrix, and Boundary Conditions)"]
 ```
 
 ---
 
-### Phase 1: Framing & Criteria Calibration
+### Phase 1: Framing and Criteria Calibration
 1. **Identify Contenders**:
    - **Player A**: First option, tool, proposal, or architecture.
    - **Player B**: Competing option, tool, proposal, or architecture.
@@ -39,10 +39,10 @@ Each player presents their strongest independent case without attacking the oppo
 
 ---
 
-### Phase 3: Cross-Examination & Direct Rebuttal
+### Phase 3: Cross-Examination and Direct Rebuttal
 Players challenge opponent weaknesses and defend their own.
 - **Player A Direct Attack**: Specific flaws, operational risks, or hidden costs in Player B.
-- **Player B Defense & Counter-Attack**: Answers Player A's points and highlights Player A's core limitations.
+- **Player B Defense and Counter-Attack**: Answers Player A's points and highlights Player A's core limitations.
 
 ---
 
@@ -80,20 +80,20 @@ The impartial judge reviews the debate record and gives a ruling.
 
 ---
 
-## Round 2: Attacks & Counter-Arguments
+## Round 2: Attacks and Counter-Arguments
 
 ### Player A Strikes:
 [Direct attack on Player B's weak spots, risks, and hidden costs]
 
-### Player B Defends & Counter-Attacks:
-[Refutation of Player A's attack + direct critique of Player A's limitations]
+### Player B Defends and Counter-Attacks:
+[Defense against Player A's attack and critique of Player A's limitations]
 
 ---
 
 ## Round 3: Final Rebuttals
 
 ### Player A Counter-Counter Argument:
-[Refutation of Player B's counter and case for superiority]
+[Response to Player B's counter and case for Option A]
 
 ### Player B Closing Punch:
 [Final rebuttal addressing Player A's defense]

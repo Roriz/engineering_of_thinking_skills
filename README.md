@@ -1,10 +1,10 @@
-# Engineering of Thinking Skills 🧠
+# Engineering of Thinking Skills
 
 Personal skills for Claude Code, Google Antigravity, Agents, and Codex. Covers prompt evaluation, edge-case grilling, defect triage, UX specs, multi-perspective reviews, and structured debates.
 
 ---
 
-## 📦 Included Skills
+## Included Skills
 
 | Skill | Purpose | Triggers / Use Cases |
 |---|---|---|
@@ -21,7 +21,7 @@ Personal skills for Claude Code, Google Antigravity, Agents, and Codex. Covers p
 
 ---
 
-## 🚀 Installation & Syncing
+## Installation and Syncing
 
 To link these skills into your local agent directories (`~/.agents/skills`, `~/.claude/skills`, `~/.gemini/config/skills`, and `~/.codex/skills`):
 
@@ -33,7 +33,7 @@ The script symlinks each skill into the active agent folders and removes stale c
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 engineering_of_thinking_skills/
@@ -69,7 +69,7 @@ engineering_of_thinking_skills/
 
 ---
 
-## 🛠️ Adding a New Skill
+## Adding a New Skill
 
 1. Create a directory under `skills/<new-skill-name>/`.
 2. Add a `SKILL.md` with YAML frontmatter:

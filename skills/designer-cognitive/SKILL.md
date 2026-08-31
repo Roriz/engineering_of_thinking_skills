@@ -3,7 +3,7 @@ name: designer-cognitive
 description: Grill, debate, brainstorm, and audit UI redesigns or new feature integrations using a 6-phase cognitive UX framework and interactive grilling rounds based purely on the given visual baseline (screenshot), spec document, and redesign goal without external codebase distractions.
 ---
 
-# Designer Cognitive (Cognitive UX Redesign & Brainstorming)
+# Designer Cognitive (Cognitive UX Redesign and Brainstorming)
 
 Execute an interactive cognitive UX audit, debate design trade-offs, brainstorm improvements, and generate modular UX documentation for interface redesigns or new feature integrations.
 
@@ -15,7 +15,7 @@ This skill synthesizes the 6-Phase Cognitive UX Framework with the Interactive G
 
 1. **No Silent Assumptions**: Never make layout, hierarchy, or interaction decisions without testing them through interactive rounds.
 2. **Interactive Design Tree**: Map redesign decisions as a branching decision tree. Work the tree in rounds of questions at the frontier (decisions whose prerequisites are settled).
-3. **Opinionated Recommendations**: Every question presented to the user must include a recommended answer (`➡️`) grounded in cognitive UX principles (Fitts's Law, Gestalt proximity, cognitive load, progressive disclosure).
+3. **Opinionated Recommendations**: Every question presented to the user must include a recommended answer grounded in cognitive UX principles (Fitts's Law, Gestalt proximity, cognitive load, progressive disclosure).
 4. **Strict Context Isolation**: Keep all debate, questions, and analysis strictly inside the provided context (the given visual baseline, specification document, and stated design goal). Do not search external codebases or repositories; maintain focus on the user's mental model and avoid distracting code-level noise.
 5. **Extreme State First**: The nominal UI state is straightforward; design resilience is proven in overflow, zero-data, error recovery, and permission edge cases.
 
@@ -36,19 +36,19 @@ Synthesize the three core inputs provided by the user:
 
 Structure the debate, brainstorming, and analysis around these 6 core phases:
 
-### Phase 1: Forensic Deconstruction & Cognitive Audit
+### Phase 1: Forensic Deconstruction and Cognitive Audit
 - **Map "As-Is" Mental Model**: Analyze current scanning patterns ($F$-Pattern for text-heavy interfaces, $Z$-Pattern for dashboards/landing pages). Identify cognitive bottlenecks where users pause, decode jargon, or cross visual paths.
 - **Identify UI Debt**: Flag legacy components placed into the layout without spatial consideration.
 - **System vs. Mental Model Reconciliation**: Check if the screen is organized around database schemas or user goal completion (*"Is the UI reflecting technical DB tables or user intent?"*).
 
-### Phase 2: Intent & Action Decomposition (JTBD)
+### Phase 2: Intent and Action Decomposition (JTBD)
 Classify screen elements and actions into a 4-tier Jobs-To-Be-Done hierarchy:
 - **L1 (Primary Intent)**: The single core reason the user navigates to this screen (e.g., *"Approve invoice"*).
 - **L2 (Secondary Intent)**: Supporting actions required to complete L1 (e.g., *"Verify line items"*, *"Check balance"*).
 - **L3 (Passive Context)**: Read-only data required for validation (e.g., *"Creation Date"*, *"System ID"*).
 - **L4 (Tertiary / Administrative)**: Rare or destructive actions (e.g., *"Export audit log"*, *"Delete record"*).
 
-### Phase 3: Data Hierarchy & Visual Taxonomy (Level Matrix)
+### Phase 3: Data Hierarchy and Visual Taxonomy (Level Matrix)
 Enforce spatial placement and visual weight based on priority level:
 
 | Priority Level | Information Type | Spatial Assignment | Visual Treatment |
@@ -58,7 +58,7 @@ Enforce spatial placement and visual weight based on priority level:
 | **L3: Secondary Info** | Timestamps, metadata badges, sub-navigation tabs | Peripheral cards, sidebar panels, footer rows | Low weight, muted text, smaller typographic scale |
 | **L4: Destruction / Admin** | Delete triggers, deep config settings, export logs | Hidden in overflow menus (`...`), slide-outs, modals | Low contrast, icon-only, or alert accents (red) on demand |
 
-### Phase 4: Spatial Orchestration & Interaction Mechanics
+### Phase 4: Spatial Orchestration and Interaction Mechanics
 - **Proximity & Chunking (Gestalt)**: Group inputs directly with the outputs they control. Place table filters directly above table headers; row-level actions locked inside rows.
 - **Fitts's Law & Touch Trajectories**: Target acquisition time $T = a + b \log_2\left(1 + \frac{D}{W}\right)$ (where $D$ is distance and $W$ is target width). Ensure critical actions have generous hit areas along natural mouse/thumb paths.
 - **Progressive Disclosure Strategy**:
@@ -66,7 +66,7 @@ Enforce spatial placement and visual weight based on priority level:
   - *Contextual Popovers*: Quick filter adjustments without leaving viewport.
   - *Full-screen Modals*: Reserved for deep workflows requiring uninterrupted focus.
 
-### Phase 5: Dynamic State Engine & Edge-Case Stress Testing
+### Phase 5: Dynamic State Engine and Edge-Case Stress Testing
 Stress-test every layout proposal against the **Six Interface States**:
 1. **Blank / Zero State**: Visual guidance, clear copy, direct primary action trigger (*"Create your first project"*).
 2. **Loading / Transition State**: Structural skeletons maintaining layout stability (avoid generic spinners).
@@ -84,20 +84,20 @@ Deliver 4 modular markdown specifications when consensus is reached:
 
 ---
 
-## 4. Grilling Protocol & Round Execution
+## 4. Grilling Protocol and Round Execution
 
 1. **Compute the Frontier**: Identify open decisions whose prerequisites are settled, drawing exclusively from the provided context.
 2. **Format Questions in Rounds**:
    Present questions using this structure:
 
    ```
-   ❓ **Q1** - **<Question Title>**: <Question body detailing spatial, cognitive, or interaction tradeoffs>
+   **Q1: <Question Title>**: <Question body detailing spatial, cognitive, or interaction tradeoffs>
 
-   ➡️ **Recommended**: <Your recommended option and UX rationale referencing cognitive principles>
+   **Recommended**: <Your recommended option and UX rationale referencing cognitive principles>
    ```
 
 3. **Wait for User Response**: Do not execute or write code until the current round is answered and settled.
-4. **Recompute & Repeat**: Reshape the design tree based on user answers. Move to the next round until the frontier is empty.
+4. **Recompute and Repeat**: Reshape the design tree based on user answers. Move to the next round until the frontier is empty.
 
 ---
 

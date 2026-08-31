@@ -40,9 +40,9 @@ That rule has three consequences worth stating plainly, because several later se
 
 **Consequences are still description.** "The confirmation appears for four seconds and is the only indication the export succeeded" is descriptive, and it is precise enough that a reader can draw their own conclusion. "The confirmation is too brief" is not. Describe the mechanism and what it leaves the user able or unable to determine; stop there.
 
-**Claims about users carry sources.** Interface behaviour can be verified by looking at it; what users think, expect, or understand cannot. Any statement about a user's knowledge or expectations is tagged for provenance under the rule in §10 — otherwise the artifact smuggles the designer's assumptions in as observed fact, which is the one failure a descriptive document cannot survive.
+**Claims about users carry sources.** Interface behaviour can be verified by looking at it; what users think, expect, or understand cannot. Any statement about a user's knowledge or expectations is tagged for provenance under the rule in §10: otherwise the artifact smuggles the designer's assumptions in as observed fact, which is the one failure a descriptive document cannot survive.
 
-Sections 39–42 are evaluative *investigation techniques*, not evaluative *output*. They exist because looking for problems is the fastest way to find the places where your description is still vague. Their yield is recorded as observed behaviour and its consequences — never as advice. Each of those sections restates this.
+Sections 39-42 are evaluative *investigation techniques*, not evaluative *output*. They exist because looking for problems is the fastest way to find the places where your description is still vague. Their yield is recorded as observed behaviour and its consequences, never as advice. Each of those sections restates this.
 
 Anything you find yourself wanting to recommend has one of two homes: it is a behaviour you can describe precisely, or it is an open question (Spec §19). It is never a suggestion.
 
@@ -54,7 +54,7 @@ Some sections deliberately look at the same material from different angles. They
 | ---- | ---------- | ------------------- | -------------------- |
 | **4** Path to the feature ↔ **13** Task flow | The feature boundary defined in §2 | Everything *before* the entry point: how the user finds and reaches the feature | Everything *from* the entry point to the exit point: how the user operates the feature |
 | **8** Information hierarchy ↔ **9** Spatial context | Intent vs. encoding | What the page ranks as important, as a logical order | Where things physically sit, and what that placement implies about relationships |
-| **16** Outputs ↔ **29** Feedback loops | Production vs. perception | What the system *produces* — including results the user never sees | Whether the user *notices, understands, and can act on* what was produced |
+| **16** Outputs ↔ **29** Feedback loops | Production vs. perception | What the system *produces*, including results the user never sees | Whether the user *notices, understands, and can act on* what was produced |
 
 When an aspect is documented on one side of a pair, cross-reference it from the other rather than restating it. An aspect is fully addressed when both sides of its pair have been answered once.
 
@@ -239,7 +239,7 @@ Next ask:
 
 Do not only describe the URL.
 
-Describe the cognitive and interaction path — the wayfinding problem, not the operating problem.
+Describe the cognitive and interaction path: the wayfinding problem, not the operating problem.
 
 For example:
 
@@ -369,9 +369,9 @@ And:
 
 > **What do they already know?**
 
-Split those two questions by how knowable they are. *Who* is usually a fact in the system — roles, permissions, and usage frequency come from configuration and analytics, and should be stated as such. *What they already know* is a claim about people's heads, and falls under the provenance rule in §10: tag it `Evidenced` / `Inferred` / `Unknown` and name the source.
+Split those two questions by how knowable they are. *Who* is usually a fact in the system (roles, permissions, and usage frequency come from configuration and analytics, and should be stated as such). *What they already know* is a claim about people's heads, and falls under the provenance rule in §10: tag it `Evidenced` / `Inferred` / `Unknown` and name the source.
 
-The two illustrative personas above are `Inferred` — reasonable, conventional, and entirely unverified. Written into an artifact without that label, an invented persona becomes the thing every later section is validated against, and the whole description inherits an error nobody can locate afterwards.
+The two illustrative personas above are `Inferred`: reasonable, conventional, and entirely unverified. Written into an artifact without that label, an invented persona becomes the thing every later section is validated against, and the whole description inherits an error nobody can locate afterwards.
 
 ---
 
@@ -395,7 +395,7 @@ For example:
 User is viewing:
 
 Report: Sales
-Date: Jan 1 – Jan 31
+Date: Jan 1 - Jan 31
 Region: Brazil
 Status: Active
 ```
@@ -420,7 +420,7 @@ This is one of the most important UX questions.
 
 # 8. Map the information hierarchy
 
-> **Scope:** this section captures the *logical* ranking of information and actions — what the page treats as important, expressed as an ordered structure. It is deliberately layout-agnostic: pixels, position, and grouping belong to §9.
+> **Scope:** this section captures the *logical* ranking of information and actions: what the page treats as important, expressed as an ordered structure. It is deliberately layout-agnostic: pixels, position, and grouping belong to §9.
 
 Now inspect the actual screen.
 
@@ -513,7 +513,7 @@ Ask:
 
 > Is it associated with the page or with the dataset?
 
-> Does its prominence match the rank §8 assigned it — or does the layout over- or under-state its importance?
+> Does its prominence match the rank §8 assigned it, or does the layout over- or under-state its importance?
 
 Spatial positioning often communicates **semantic relationships**. A mismatch between the §8 ranking and the §9 placement is a finding in itself, and should be recorded rather than smoothed over.
 
@@ -525,13 +525,13 @@ Now ask:
 
 > **What does the user believe this feature represents?**
 
-This is the **mental model** — and it is the single most dangerous claim in the entire artifact.
+This is the **mental model**, and it is the single most dangerous claim in the entire artifact.
 
 ## The validity problem, stated plainly
 
 Everything else in this procedure can be verified by looking: the IA is there, the states are there, the business rules are in the code. This one cannot. **You are making a claim about the contents of someone else's head, and you are sitting at a desk.**
 
-Written without a source, "the user expects Archive to preserve the item" means "*I* expect Archive to preserve the item, and I am a person who has been staring at this product for three days." That is not the user's model. It is the designer's model wearing the user's name — and because §0 requires a descriptive artifact, it is worse than an unsourced recommendation: a recommendation announces itself as opinion, whereas an unsourced mental model presents opinion as an observed fact about a population.
+Written without a source, "the user expects Archive to preserve the item" means "*I* expect Archive to preserve the item, and I am a person who has been staring at this product for three days." That is not the user's model. It is the designer's model wearing the user's name. Because §0 requires a descriptive artifact, it is worse than an unsourced recommendation: a recommendation announces itself as opinion, whereas an unsourced mental model presents opinion as an observed fact about a population.
 
 Designers are also systematically the wrong instrument here. You know what the labels mean, you know what happens after the click, you have seen the empty state. Expertise is exactly what destroys your access to the naive reading, and no amount of care compensates for it.
 
@@ -548,20 +548,20 @@ So the rule:
 | `Contested` | Evidence exists on both sides, or different segments differ. |
 | `Unknown` | Nobody has asked. Say so. |
 
-`Inferred` is a perfectly respectable tag. The failure is not inferring — desk analysis is most of what you have — it is inferring silently, so that a reader six months later cannot tell which lines were earned and which were assumed.
+`Inferred` is a perfectly respectable tag. The failure is not inferring (desk analysis is most of what you have); it is inferring silently, so that a reader six months later cannot tell which lines were earned and which were assumed.
 
 ## Triangulate before you infer
 
 Most teams have more evidence than they think, sitting in places nobody calls research. Work down this ladder and stop as soon as you have something:
 
-1. **Usability tests / user interviews** — direct, strongest. Rare.
-2. **Session recordings** — hesitation, repeated clicking, abandoned flows, back-button use. These show the model failing in real time.
-3. **Support tickets and their wording** — the highest-yield source almost nobody reads. The *phrasing* of a complaint is a direct sample of the user's vocabulary and model.
-4. **Community channels** — forums, Discord, Reddit, app-store reviews. Unprompted and unfiltered, which is precisely their value.
-5. **In-product search queries and help-centre searches** — what people type when they cannot find something is a description of the model they arrived with.
-6. **Analytics drop-off at specific decision points** (§37) — shows *where* the model breaks, not what it is.
-7. **Sales, onboarding, and support staff** — they explain this feature to confused humans weekly. They can recite the misunderstanding verbatim.
-8. **Designer inference** — the floor, not the default. Tag it `Inferred` and move on.
+1. **Usability tests / user interviews**: direct, strongest. Rare.
+2. **Session recordings**: hesitation, repeated clicking, abandoned flows, back-button use. These show the model failing in real time.
+3. **Support tickets and their wording**: the highest-yield source almost nobody reads. The *phrasing* of a complaint is a direct sample of the user's vocabulary and model.
+4. **Community channels**: forums, Discord, Reddit, app-store reviews. Unprompted and unfiltered, which is precisely their value.
+5. **In-product search queries and help-centre searches**: what people type when they cannot find something is a description of the model they arrived with.
+6. **Analytics drop-off at specific decision points** (§37): shows *where* the model breaks, not what it is.
+7. **Sales, onboarding, and support staff**: they explain this feature to confused humans weekly. They can recite the misunderstanding verbatim.
+8. **Designer inference**: the floor, not the default. Tag it `Inferred` and move on.
 
 Sources 3, 4, 5, and 7 usually already exist and cost an afternoon. Reaching for #8 without checking them is the failure this section exists to prevent.
 
@@ -577,7 +577,7 @@ What actually happens. Verifiable, so no tags needed.
 
 ### Divergence
 
-Where the two differ — and whether the divergence itself is evidenced or inferred.
+Where the two differ, and whether the divergence itself is evidenced or inferred.
 
 For example, "Archive" could mean:
 
@@ -589,9 +589,9 @@ For example, "Archive" could mean:
 
 The UI label alone isn't enough to know which. Written properly:
 
-> **User's mental model** — `Evidenced`: Users expect Archive to remove an item from active lists while preserving it for later retrieval. Source: 14 support tickets Q1–Q2 asking "how do I get my archived projects back", plus 2 of 5 participants in the March usability test.
-> **Product's actual model** — Archive sets `status=archived`; records remain queryable via the Archived filter for 90 days, then are purged.
-> **Divergence** — `Evidenced` for the retrieval expectation, `Unknown` for the 90-day window: no evidence exists that any user is aware of it.
+> **User's mental model** (`Evidenced`): Users expect Archive to remove an item from active lists while preserving it for later retrieval. Source: 14 support tickets Q1-Q2 asking "how do I get my archived projects back", plus 2 of 5 participants in the March usability test.
+> **Product's actual model**: Archive sets `status=archived`; records remain queryable via the Archived filter for 90 days, then are purged.
+> **Divergence** (`Evidenced` for the retrieval expectation, `Unknown` for the 90-day window: no evidence exists that any user is aware of it.
 
 Compare the same thing written the way it usually is:
 
@@ -605,13 +605,13 @@ Identical surface claim, zero traceability, and a reader has no way to tell it a
 
 > "A reading companion that remembers characters so I don't have to."
 
-That sentence is defensible because the document carries the raw material behind it — user quotes gathered unprompted from Reddit ("I don't even remember who that is", "half the time I have to stop reading to Google who they are, and sometimes I get distracted and don't even make it back to the book"), ranked frustrations traceable to specific threads, and analytics for the geographic claims. The frustrations are `Evidenced`. The tap-dismiss-continue rhythm attributed to Vikram is `Inferred` — a reasonable reading of those quotes, but a reading — and the document would be stronger for saying which is which.
+That sentence is defensible because the document carries the raw material behind it: user quotes gathered unprompted from Reddit ("I don't even remember who that is", "half the time I have to stop reading to Google who they are, and sometimes I get distracted and don't even make it back to the book"), ranked frustrations traceable to specific threads, and analytics for the geographic claims. The frustrations are `Evidenced`. The tap-dismiss-continue rhythm attributed to Vikram is `Inferred` (a reasonable reading of those quotes, but an interpretation), and the document would be stronger for saying which is which.
 
 That is the standard: a mental model is only as good as the sentences underneath it, and the artifact should let a reader see them.
 
 ## This section is provisional
 
-You are writing §10 long before §37 and §38, where the actual behavioural evidence gets examined. That ordering is deliberate — recording your hypothesis *before* looking at the data is what makes the data able to contradict you.
+You are writing §10 long before §37 and §38, where the actual behavioural evidence gets examined. That ordering is deliberate: recording your hypothesis *before* looking at the data is what makes the data able to contradict you.
 
 So mark this section **provisional on first pass, and return to it after §38.** On the return trip, every claim either gets upgraded to `Evidenced` with a source, gets corrected, or stays `Inferred` with that status visible in the final artifact. A §10 that comes out of §38 completely unchanged usually means the evidence was read looking for confirmation.
 
@@ -689,8 +689,8 @@ Means:
 ### Selection-level action
 
 ```text
-☑ Customer A
-☑ Customer B
+[x] Customer A
+[x] Customer B
 
 [Export selected]
 ```
@@ -715,7 +715,7 @@ These are fundamentally different UX models.
 
 # 13. Reconstruct the task flow
 
-> **Scope:** this section begins where §4 ended — the user is already at the entry point. Do not re-document the navigation that brought them there. This is the operating problem: what happens between entry point and exit point, including every branch.
+> **Scope:** this section begins where §4 ended: the user is already at the entry point. Do not re-document the navigation that brought them there. This is the operating problem: what happens between entry point and exit point, including every branch.
 
 Now model the complete interaction.
 
@@ -836,7 +836,7 @@ Then document:
 
 # 16. Map every output
 
-> **Scope:** this is an inventory of what the system *produces* — every artifact, state change, and side effect, including the ones the user never perceives. Whether the user notices, understands, or can act on an output is not evaluated here; that is §29.
+> **Scope:** this is an inventory of what the system *produces*: every artifact, state change, and side effect, including the ones the user never perceives. Whether the user notices, understands, or can act on an output is not evaluated here; that is §29.
 
 The feature isn't just about inputs.
 
@@ -866,10 +866,10 @@ And classify it:
 | Output | What changed | Perceivable by the user? | Where |
 | ------ | ------------ | ------------------------ | ----- |
 | Downloaded file | File written to disk | Yes | Browser download bar |
-| Audit log entry | Record created | No | — |
+| Audit log entry | Record created | No | - |
 | Background job | Job queued | Only via later notification | Notification centre |
 
-The "Perceivable?" column is the handoff to §29 — every `No` or `Only via…` is a loop that section has to close.
+The "Perceivable?" column is the handoff to §29: every `No` or `Only via…` is a loop that section has to close.
 
 ---
 
@@ -1183,7 +1183,7 @@ Now ask:
 
 > Why is this feature different?
 
-Differences may be intentional—or inconsistencies.
+Differences may be intentional or inconsistencies.
 
 ---
 
@@ -1312,7 +1312,7 @@ number of steps
 + uncertainty
 ```
 
-The exact formula isn't mathematical—it is a thinking tool.
+The exact formula isn't mathematical; it is a thinking tool.
 
 ---
 
@@ -1388,7 +1388,7 @@ Walk the §16 output table and ask, per row:
 
 > How long do they wait before that evidence appears?
 
-> If the output is not perceivable, does the user need to know about it — and if so, what carries that knowledge?
+> If the output is not perceivable, does the user need to know about it, and if so, what carries that knowledge?
 
 An output with no perceivable counterpart is a broken loop. So is one whose evidence arrives too late to be connected to the action that caused it.
 
@@ -1420,13 +1420,13 @@ Recovery action
 
 Record which of the four the product's actual message carries, quoting it verbatim, and state what the user is left unable to determine.
 
-Take the same underlying failure — the dataset exceeds the synchronous export limit — expressed three ways:
+Take the same underlying failure (the dataset exceeds the synchronous export limit) expressed three ways:
 
 | Actual message | Carries | User is left unable to determine |
 | -------------- | ------- | -------------------------------- |
 | "Export failed." | Problem | Why it failed; whether retrying would help; whether anything can be changed |
 | "This report contains too much data to export at once. Narrow the date range and try again." | Problem, explanation, cause, one recovery action | Whether any route exists for exporting the full range |
-| "This report contains too much data to export at once. Narrow the date range or request a background export." | Problem, explanation, cause, two recovery actions | — |
+| "This report contains too much data to export at once. Narrow the date range or request a background export." | Problem, explanation, cause, two recovery actions | - |
 
 Quote the row that matches the product and note the gap. Do not write the row you wish it said.
 
@@ -1678,10 +1678,10 @@ Reopen §10 and §6 with this evidence in hand and settle every claim one of thr
 | Outcome | What to write |
 | ------- | ------------- |
 | Confirmed | Upgrade the tag to `Evidenced` and cite the source |
-| Contradicted | Replace the claim with what the evidence shows, and keep a line noting what was assumed — a corrected assumption is useful information about the feature's legibility |
+| Contradicted | Replace the claim with what the evidence shows, and keep a line noting what was assumed; a corrected assumption is useful information about the feature's legibility |
 | Still untouched | Leave it `Inferred` or `Unknown`, visibly, in the final artifact |
 
-Two failure modes to watch for. The first is reading the evidence looking for confirmation — if nothing in §10 changed, suspect this before concluding you were right. The second is treating the absence of tickets as evidence of comprehension: users who misunderstand a feature usually stop using it rather than write in, so silence is `Unknown`, never `Evidenced`.
+Two failure modes to watch for. The first is reading the evidence looking for confirmation: if nothing in §10 changed, suspect this before concluding you were right. The second is treating the absence of tickets as evidence of comprehension: users who misunderstand a feature usually stop using it rather than write in, so silence is `Unknown`, never `Evidenced`.
 
 If no evidence of any kind exists, that is itself a finding, and the artifact says so: *"No behavioural evidence available for this feature; all mental-model claims are `Inferred`."* One honest sentence tells a reader exactly how much weight the persona and mental-model sections can bear.
 
@@ -1689,7 +1689,7 @@ If no evidence of any kind exists, that is itself a finding, and the artifact sa
 
 # 39. Identify points of friction
 
-> **Descriptive output.** This section finds friction; it does not judge or fix it. Each item is recorded as *what the interface does* and *what that leaves the user unable to do* — with the evidence it rests on. The categories below are a vocabulary for describing friction precisely, not a scoring rubric.
+> **Descriptive output.** This section finds friction; it does not judge or fix it. Each item is recorded as *what the interface does* and *what that leaves the user unable to do*, with the evidence it rests on. The categories below are a vocabulary for describing friction precisely, not a scoring rubric.
 
 Only after reconstructing the experience should you look for friction in it.
 
@@ -1698,13 +1698,13 @@ Write each observation in this shape:
 ```text
 Observation: <what the interface does>
 Consequence: <what the user can or cannot determine / do as a result>
-Evidence:    <screenshot, analytics, ticket, test — or "inferred, unverified">
+Evidence:    <screenshot, analytics, ticket, test, or "inferred, unverified">
 Category:    <from the list below>
 ```
 
 For example:
 
-> **Observation:** Export produces no visible response until the file download begins, which takes 4–20 seconds depending on dataset size.
+> **Observation:** Export produces no visible response until the file download begins, which takes 4-20 seconds depending on dataset size.
 > **Consequence:** During that window the user has no indication the click registered; §38 session recordings show repeated clicking in 12% of exports.
 > **Evidence:** Session recordings, Q2 sample.
 > **Category:** Feedback.
@@ -1713,7 +1713,7 @@ Not:
 
 > Export needs a loading indicator.
 
-The second sentence may well be true. It is a design decision, made later, by whoever owns that decision — and recording it here disguises a proposal as a finding.
+The second sentence may well be true. It is a design decision, made later, by whoever owns that decision; recording it here disguises a proposal as a finding.
 
 Classify the friction.
 
@@ -1769,7 +1769,7 @@ Feature lives in the wrong conceptual location.
 
 # 40. Separate presentation friction from model friction
 
-> **Descriptive output.** This section classifies *where* an observation originates. It does not propose what to do about it — naming a cause and naming a cure are different acts, and only the first belongs in the artifact.
+> **Descriptive output.** This section classifies *where* an observation originates. It does not propose what to do about it: naming a cause and naming a cure are different acts, and only the first belongs in the artifact.
 
 This distinction is extremely valuable, because the two have different causes and are described differently.
 
@@ -1783,7 +1783,7 @@ The model is coherent; how it is rendered obscures it.
 
 The rendering is faithful; the underlying model is what users cannot reconstruct.
 
-> Two Export controls exist on the page — one in the toolbar, one in the row menu — and nothing in the interface distinguishes their scope. Users cannot determine which records either will export.
+> Two Export controls exist on the page (one in the toolbar, one in the row menu), and nothing in the interface distinguishes their scope. Users cannot determine which records either will export.
 
 Notice that both are statements of fact, and neither names a remedy. The first implies a colour change and the second implies something much larger, but the artifact records only what is there.
 
@@ -1791,7 +1791,7 @@ Always ask:
 
 > **Does this observation originate in presentation, or in the underlying experience model?**
 
-The answer changes who the observation concerns, which is why it is worth recording — a presentation observation is usually one team's material, a model observation is usually several.
+The answer changes who the observation concerns, which is why it is worth recording: a presentation observation is usually one team's material, a model observation is usually several.
 
 ---
 
@@ -1822,7 +1822,7 @@ Then determine whether the difference is:
 4. Accidental
 5. Unknown
 
-> **Descriptive output.** This classification is a claim about origin, and it needs a source: a decision record, a changelog, a person who remembers. Where no source exists, the honest entry is *Unknown* — never *Accidental* because it looks wrong to you. "Unknown" is a finding; a guess dressed as a classification is not. And note what the matrix does not say: that the feature ought to match the platform standard.
+> **Descriptive output.** This classification is a claim about origin, and it needs a source: a decision record, a changelog, a person who remembers. Where no source exists, the honest entry is *Unknown*, never *Accidental* because it looks wrong to you. "Unknown" is a finding; a guess dressed as a classification is not. And note what the matrix does not say: that the feature ought to match the platform standard.
 
 ---
 
@@ -1881,7 +1881,7 @@ Each question resolves to a described behaviour, not a verdict:
 | Principle | Descriptive answer | Not |
 | --------- | ------------------ | --- |
 | Feedback | "Success is signalled only by the browser's download indicator; the page itself does not change." | "Feedback is weak." |
-| Predictability | "The label reads *Export*; the dialog is the first place the record count appears." | "Poor predictability — 2/5." |
+| Predictability | "The label reads *Export*; the dialog is the first place the record count appears." | "Poor predictability: 2/5." |
 | User control | "Once started, the job cannot be cancelled from the interface." | "Users should be able to cancel." |
 
 The right-hand column is the failure mode: it compresses an observation into an opinion and loses the detail that made the observation useful.
@@ -1945,7 +1945,7 @@ This is essentially the **context model** of the feature.
 
 Only now should the designer create the final UX spec.
 
-Everything below is written in the descriptive register established in §0: present tense, current behaviour, sources named, uncertainty declared. Sections 1–17 describe the feature as it is. Section 18 holds the friction observed while describing it. Sections 19–20 hold what is still unresolved. Nothing anywhere proposes a change.
+Everything below is written in the descriptive register established in §0: present tense, current behaviour, sources named, uncertainty declared. Sections 1-17 describe the feature as it is. Section 18 holds the friction observed while describing it. Sections 19-20 hold what is still unresolved. Nothing anywhere proposes a change.
 
 Use this exact structure.
 
@@ -2034,14 +2034,14 @@ Document each attribute with its provenance (§10), because this section mixes v
 | Attribute | Value | Provenance | Source |
 | --------- | ----- | ---------- | ------ |
 | Role | Operations manager | System fact | Role config |
-| Frequency | 2–3 exports/week | System fact | Analytics, 90d |
+| Frequency | 2-3 exports/week | System fact | Analytics, 90d |
 | Goal | Share data with finance | `Evidenced` | 6 support tickets, 2 interviews |
-| Knowledge level | Unfamiliar with CSV/XLSX difference | `Inferred` | — |
+| Knowledge level | Unfamiliar with CSV/XLSX difference | `Inferred` | - |
 | Mental model | Export = "download what I'm looking at" | `Contested` | Interviews say filtered; tickets suggest some expect all records |
-| Environment | Desktop, office hours | `Inferred` | — |
+| Environment | Desktop, office hours | `Inferred` | - |
 | Permissions | Export granted | System fact | Permission matrix |
 
-A reader can then tell at a glance which rows would survive contact with a real user and which are the author's best guess. Rows still marked `Inferred` after §38 stay that way in the delivered artifact — that is honest reporting, not an incomplete section.
+A reader can then tell at a glance which rows would survive contact with a real user and which are the author's best guess. Rows still marked `Inferred` after §38 stay that way in the delivered artifact; that is honest reporting, not an incomplete section.
 
 ---
 
@@ -2213,7 +2213,7 @@ if analytics are part of the product's requirements.
 
 This is particularly important.
 
-These are **reconstructed**, not proposed. Every row describes a decision the product has already made and is currently enforcing. The rationale column records *why it appears to be that way*, with its source — and where no source exists, the rationale is `Unknown`, which is a legitimate and useful entry.
+These are **reconstructed**, not proposed. Every row describes a decision the product has already made and is currently enforcing. The rationale column records *why it appears to be that way*, with its source; where no source exists, the rationale is `Unknown`, which is a legitimate and useful entry.
 
 | Decision                     | Rationale                        | Source |
 | ---------------------------- | -------------------------------- | ------ |
@@ -2236,12 +2236,12 @@ into:
 
 # 18. Observed Friction
 
-Where the findings from §39–42 land.
+Where the findings from §39-42 land.
 
-Each entry is an observation, its consequence, and its evidence — in the shape §39 defines. No remedies, no severity, no ordering by importance.
+Each entry is an observation, its consequence, and its evidence, in the shape §39 defines. No remedies, no severity, no ordering by importance.
 
 ```text
-F-001  The export button gives no response for 4–20s before the download starts.
+F-001  The export button gives no response for 4-20s before the download starts.
        → User cannot tell the click registered.
        → Session recordings; repeat-clicking in 12% of exports.
        → Category: Feedback. Origin: model-level (§40).
@@ -2252,7 +2252,7 @@ F-002  Toolbar Export and row-menu Export use identical labels and icons.
        → Category: Comprehension. Origin: model-level (§40).
 ```
 
-Keeping this section separate from §1–17 is what lets the specification stay usable as a neutral reference: a reader who wants only the current behaviour can stop before it, and a reader working on improvements has the raw material without the artifact having chosen for them.
+Keeping this section separate from §1-17 is what lets the specification stay usable as a neutral reference: a reader who wants only the current behaviour can stop before it, and a reader working on improvements has the raw material without the artifact having chosen for them.
 
 ---
 
@@ -2268,7 +2268,7 @@ Q-002: What is the maximum synchronous export size?
 Q-003: Is any notification sent when background processing completes?
 ```
 
-Note the form: every question asks what *is*, not what *should be*. "Should users be notified after background processing?" is a design question and does not belong here — it belongs to whoever owns that decision. If a question can only be answered by making a choice rather than by investigating, it is out of scope for this artifact.
+Note the form: every question asks what *is*, not what *should be*. "Should users be notified after background processing?" is a design question and does not belong here; it belongs to whoever owns that decision. If a question can only be answered by making a choice rather than by investigating, it is out of scope for this artifact.
 
 This is extremely useful in collaborative product development.
 
@@ -2325,7 +2325,7 @@ This is where the UX spec becomes useful to:
 
 **This checklist is an index, not a method.**
 
-Each line below is a *recall cue* for a section of the procedure — a way to notice, mid-review, that you skipped something. It is not a shorter version of the work. A question here can be answered in one sentence; the section it points to cannot. Answering the 30 questions without opening the sections produces a plausible-sounding document with none of the rigour the procedure exists to enforce.
+Each line below is a *recall cue* for a section of the procedure: a way to notice, mid-review, that you skipped something. It is not a shorter version of the work. A question here can be answered in one sentence; the section it points to cannot. Answering the 30 questions without opening the sections produces a plausible-sounding document with none of the rigour the procedure exists to enforce.
 
 So each step carries two extra columns: **where the real work lives**, and **the condition that says you are actually finished**. If the second column isn't satisfied, the step isn't done, no matter how confidently the question can be answered.
 
@@ -2337,42 +2337,42 @@ So each step carries two extra columns: **where the real work lives**, and **the
 | 4 | Who uses it? | §6 | At least two personas contrasted; role/frequency stated as system fact, prior knowledge tagged for provenance |
 | 5 | Why do they come here, and what are they ultimately after? | §5 | User goal, feature goal, and interaction goal stated separately |
 | 6 | What do they know before arriving? | §6 | Prior knowledge and expected terminology identified |
-| 7 | What state are they in on arrival? | §7 | Active filters, selections, and loaded data enumerated — and what the action means *in that state* |
+| 7 | What state are they in on arrival? | §7 | Active filters, selections, and loaded data enumerated, and what the action means *in that state* |
 | 8 | What does the screen tell them? | §25, §26, §28 | Scent, discoverability, and affordance assessed as three separate qualities |
 | 9 | What is important, and does the layout say so? | §8, §9 | A ranking exists, and any mismatch with placement is recorded |
 | 10 | What object does it act on, at what level? | §11, §12 | Page-, selection-, and row-level ownership disambiguated |
-| 11 | What does the user expect it to do — and how do I know? | §10 | Mental model, actual model, and divergence written, **every claim tagged `Evidenced` / `Inferred` / `Contested` / `Unknown` with sources**, and the triangulation ladder worked before settling for inference |
+| 11 | What does the user expect it to do, and how do I know? | §10 | Mental model, actual model, and divergence written, **every claim tagged `Evidenced` / `Inferred` / `Contested` / `Unknown` with sources**, and the triangulation ladder worked before settling for inference |
 | 12 | What does the system actually do, over what timescale? | §18, §19 | Sync/async, persistence, cancellation, retry, and timing answered |
-| 13 | What is the full task flow, including branches? | §13 | Every branch captured — not only the happy path |
+| 13 | What is the full task flow, including branches? | §13 | Every branch captured, not only the happy path |
 | 14 | What are the inputs? | §15 | Purpose, required, default, and validation per input |
 | 15 | What decisions must the user make, and what do they cost? | §14, §27 | Defaults justified, and complexity assessed against §27 |
 | 16 | What are the outputs, and which does the user perceive? | §16, §29 | Output inventory built, then every unperceived output resolved as a loop |
-| 17 | **What are all the states — and every transition between them?** | §17 | Not a list of states: a state machine. Triggers, transitions, terminal states, and all twelve state types in §17, including partial, interrupted, and recovery |
+| 17 | **What are all the states, and every transition between them?** | §17 | Not a list of states: a state machine. Triggers, transitions, terminal states, and all twelve state types in §17, including partial, interrupted, and recovery |
 | 18 | What can go wrong, and what is irreversible? | §17, §31 | Failure modes enumerated, and the consequence model applied to anything destructive |
 | 19 | How does the user recover? | §30 | Every failure has explanation → cause → recovery action |
 | 20 | What does the data actually mean? | §35 | Definition, units, freshness, and nullability of displayed fields |
 | 21 | What business rules constrain it? | §36 | Rules written as explicit conditionals, separated from UX rules |
 | 22 | What permissions constrain it? | §20 | Hidden vs. disabled vs. available decided per role, with rationale |
 | 23 | What does it depend on? | §21 | Dependency map, used to generate edge cases |
-| 24 | What platform patterns does it follow — or violate? | §22, §41 | Each divergence classified: intentional, necessary, legacy, accidental, unknown |
+| 24 | What platform patterns does it follow or violate? | §22, §41 | Each divergence classified: intentional, necessary, legacy, accidental, unknown |
 | 25 | What similar features exist, and why does this one differ? | §23 | Comparison table across at least two analogues |
 | 26 | What design-system patterns apply? | §24 | Components identified *without* the spec collapsing into a component list |
 | 27 | Can every user operate it, on every screen, in every locale? | §32, §33, §34 | Keyboard, screen reader, visual, and touch answered; breakpoints treated as possible interaction changes, not shrinking |
-| 28 | What does real user behaviour say? | §37, §38 | Intended UX compared against evidence — analytics, tickets, research — **and §10/§6 revisited and re-tagged in light of it** |
+| 28 | What does real user behaviour say? | §37, §38 | Intended UX compared against evidence (analytics, tickets, research), **and §10/§6 revisited and re-tagged in light of it** |
 | 29 | Where is the friction, and does it originate in presentation or in the model? | §39, §40, §42 | Each observation carries consequence + evidence + origin, and contains no proposed remedy |
-| 30 | What has the product already decided, and what remains unknown? | §1, spec §17–20 | Existing decisions reconstructed with sources; open questions and assumptions recorded, not silently resolved |
+| 30 | What has the product already decided, and what remains unknown? | §1, spec §17-20 | Existing decisions reconstructed with sources; open questions and assumptions recorded, not silently resolved |
 
 ## Where this checklist most often goes shallow
 
 Four steps compress the most material, and are the ones to distrust when they feel quick:
 
-**Step 17 — states.** "What are all the states?" invites a list of five nouns. §17 asks for a machine: what triggers each transition, which states are terminal, what happens on partial success, and what the user sees if they close the tab mid-operation. A list of states is not a state machine, and the difference is where most implementation ambiguity hides.
+**Step 17 (states):** "What are all the states?" invites a list of five nouns. §17 asks for a machine: what triggers each transition, which states are terminal, what happens on partial success, and what the user sees if they close the tab mid-operation. A list of states is not a state machine, and the difference is where most implementation ambiguity hides.
 
-**Step 21 — business rules.** One line here can stand in for the entire rule set that governs the feature's behaviour. §36 wants them written as conditionals, and the UX rule kept distinct from the business rule that causes it.
+**Step 21 (business rules):** One line here can stand in for the entire rule set that governs the feature's behaviour. §36 wants them written as conditionals, and the UX rule kept distinct from the business rule that causes it.
 
-**Step 27 — accessibility, responsive, localization.** Three full sections behind one question. Compressing them is exactly how accessibility becomes a final checklist item instead of part of the feature model, which §32 explicitly warns against.
+**Step 27 (accessibility, responsive, localization):** Three full sections behind one question. Compressing them is exactly how accessibility becomes a final checklist item instead of part of the feature model, which §32 explicitly warns against.
 
-**Step 28 — real behaviour.** Cheap to answer with "no data available", which is sometimes true and often just unchecked — support-ticket wording and community channels usually exist and are rarely read. This step also carries a second job the question doesn't hint at: it is the audit that settles the inferred claims in §10 and §6. Skipping it leaves the artifact's statements about users permanently unverified while looking exactly like its verified ones.
+**Step 28 (real behaviour):** Cheap to answer with "no data available", which is sometimes true and often just unchecked; support-ticket wording and community channels usually exist and are rarely read. This step also carries a second job the question doesn't hint at: it is the audit that settles the inferred claims in §10 and §6. Skipping it leaves the artifact's statements about users permanently unverified while looking exactly like its verified ones.
 
 ## The quality gate
 
@@ -2384,9 +2384,9 @@ Ask it of the specification produced in §44, not of the checklist. If an engine
 
 And a second gate, on tone and validity:
 
-> **Can every sentence be checked against the running product — or, where it cannot, does it name its source or declare itself unverified?**
+> **Can every sentence be checked against the running product or, where it cannot, does it name its source or declare itself unverified?**
 
-A sentence fails the first half by proposing, rating, or wishing rather than describing: delete it, or convert it into the observation it was built on. It fails the second half by asserting something about users with nothing behind it: give it a source, or tag it `Inferred` (§10). Claims about the interface are settled by looking. Claims about people are settled by evidence or by admission — never by confidence.
+A sentence fails the first half by proposing, rating, or wishing rather than describing: delete it, or convert it into the observation it was built on. It fails the second half by asserting something about users with nothing behind it: give it a source, or tag it `Inferred` (§10). Claims about the interface are settled by looking. Claims about people are settled by evidence or by admission, never by confidence.
 
 > **A good UX specification should eliminate as much implementation ambiguity as possible without prescribing implementation unnecessarily.**
 
@@ -2396,7 +2396,7 @@ A sentence fails the first half by proposing, rating, or wishing rather than des
 
 I would also explicitly structure the investigation into **five concentric contexts**.
 
-### Level 1 — Platform context
+### Level 1: Platform context
 
 > Where does this feature exist?
 
@@ -2407,7 +2407,7 @@ I would also explicitly structure the investigation into **five concentric conte
 * Permissions
 * Platform conventions
 
-### Level 2 — Page context
+### Level 2: Page context
 
 > What is happening on this particular screen?
 
@@ -2418,7 +2418,7 @@ I would also explicitly structure the investigation into **five concentric conte
 * Neighboring features
 * Current state
 
-### Level 3 — Task context
+### Level 3: Task context
 
 > What is the user trying to accomplish?
 
@@ -2429,7 +2429,7 @@ I would also explicitly structure the investigation into **five concentric conte
 * Decisions
 * Workflow
 
-### Level 4 — Interaction context
+### Level 4: Interaction context
 
 > How does the feature actually behave?
 
@@ -2442,7 +2442,7 @@ I would also explicitly structure the investigation into **five concentric conte
 * Recovery
 * Timing
 
-### Level 5 — System context
+### Level 5: System context
 
 > What rules make the experience behave this way?
 
@@ -2512,4 +2512,4 @@ Acceptance criteria
 
 That produces a UX spec that is **contextual rather than cosmetic**: it explains not merely *what the feature looks like*, but **where it belongs, why it exists, how users reach it, what they expect, how it behaves, what constraints govern it, and what experience the platform currently provides at that exact point in the product.**
 
-And it stops there. The artifact's authority comes from being checkable — every claim traceable to the product, a source, or a declared assumption. The moment it starts arguing for a different feature, it stops being the thing everyone can agree on and becomes one more opinion in the discussion. Describe the feature so completely and so neutrally that the people who decide what to change can do so without having to re-derive any of it.
+And it stops there. The artifact's authority comes from being checkable: every claim traceable to the product, a source, or a declared assumption. The moment it starts arguing for a different feature, it stops being the thing everyone can agree on and becomes one more opinion in the discussion. Describe the feature so completely and so neutrally that the people who decide what to change can do so without having to re-derive any of it.

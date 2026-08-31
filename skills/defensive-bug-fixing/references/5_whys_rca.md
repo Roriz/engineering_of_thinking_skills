@@ -1,4 +1,4 @@
-# 5 Whys Root Cause Analysis (RCA) Guide & Causal Matrix
+# 5 Whys Root Cause Analysis (RCA) Guide and Causal Matrix
 
 Root Cause Analysis ensures that software fixes resolve fundamental design, concurrency, state management, or resource allocation defects rather than applying superficial band-aids.
 
@@ -26,7 +26,7 @@ Symptom: Exception / Crash
 4. **Why were concurrent webhooks running without coordination?**
    - Because the message queue partition key was set to `EventID` instead of `UserID`, causing parallel processing of events for the same user across multiple workers.
 5. **ROOT CAUSE**:
-   - **Flawed Queue Partitioning Strategy & Unprotected Shared State Mutation**. The system lacked strict message ordering per user and lacked optimistic concurrency locking on subscription state.
+   - **Flawed Queue Partitioning Strategy and Unprotected Shared State Mutation**. The system lacked strict message ordering per user and lacked optimistic concurrency locking on subscription state.
 
 ---
 
@@ -41,7 +41,7 @@ Symptom: Exception / Crash
 4. **Why were size flags missing in WASM build script?**
    - Because WASM build scripts ran default dev/fast release profiles without checking binary size limits.
 5. **ROOT CAUSE**:
-   - **Unbounded WASM Binary Compilation & Missing Optimization Fingerprint Validation**. Build pipeline lacked automated size checks and release profile optimization enforcement.
+   - **Unbounded WASM Binary Compilation and Missing Optimization Fingerprint Validation**. Build pipeline lacked automated size checks and release profile optimization enforcement.
 
 ---
 
@@ -54,4 +54,4 @@ When proposing a root fix, evaluate the impact across four standard vectors:
 | **Concurrency Safety** | Race window during async operations | Locks / mutexes / partition keys guarantee sequential consistency |
 | **Null Safety** | Implicit state assumption, unhandled errors | Explicit validation, typed errors, immutable local snapshots |
 | **Error Recovery** | Process crash, partial DB state | Transactional rollback, clean HTTP status, correlation logging |
-| **Performance / Latency** | Unlocked latency (unsafe) | Acceptable lock/validation overhead for 100% data integrity |
+| **Performance / Latency** | Unlocked latency (unsafe) | Acceptable lock/validation overhead for full data integrity |
