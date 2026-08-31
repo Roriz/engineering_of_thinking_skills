@@ -1,6 +1,6 @@
 # Engineering of Thinking Skills 🧠⚡
 
-Personal collection of high-leverage agent skills designed for rigorous cognitive engineering, systematic defect remediation, prompt evaluation, UX reverse-engineering, and interactive design-tree stress testing.
+Personal collection of high-leverage agent skills designed for rigorous cognitive engineering, systematic defect remediation, prompt evaluation, UX reverse-engineering, multi-perspective dialectic deliberation, and interactive design-tree stress testing.
 
 Compatible with **Claude Code**, **Google Antigravity / Gemini CLI**, **Agents**, and **Codex**.
 
@@ -10,6 +10,7 @@ Compatible with **Claude Code**, **Google Antigravity / Gemini CLI**, **Agents**
 
 | Skill | Purpose | Primary Triggers / Use Cases |
 |---|---|---|
+| [`dialectic-consensus`](skills/dialectic-consensus/SKILL.md) | Deliberates complex decisions, tradeoffs, code architectures, or scoring using a 3-perspective jury with contradictory lenses, synthesizing tensions into a reconciled consensus | `/jury`, `/consensus`, *"evaluate with 3 perspectives"*, multi-vision tradeoffs, high-stakes decisions |
 | [`grilling`](skills/grilling/SKILL.md) | Stress-tests plans, ideas, and decisions using an interactive design-tree interview framework | `/grill-me`, *"grill me on this plan"*, stress-testing architecture/decisions |
 | [`tune-against-eval`](skills/tune-against-eval/SKILL.md) | Iteratively improves prompts and pipeline steps against gold-standard evals via falsifiable hypotheses and isolated single-variable edits | Raising precision/recall/F1, *"why is this failing"*, prompt iteration |
 | [`humanizer`](skills/humanizer/SKILL.md) | Strips AI-generated writing tells, significance inflation, and robotic sentence patterns based on Wikipedia's AI cleanup guidelines | Editing text to sound natural, human-written, and grounded |
@@ -48,6 +49,8 @@ engineering_of_thinking_skills/
     │       ├── 5_whys_rca.md
     │       └── rollbar_parsing.md
     ├── designer-cognitive/
+    │   └── SKILL.md
+    ├── dialectic-consensus/
     │   └── SKILL.md
     ├── grilling/
     │   └── SKILL.md
