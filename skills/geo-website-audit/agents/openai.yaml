@@ -1,0 +1,4 @@
+interface:
+  display_name: "GEO Website Audit"
+  short_description: "Prioritize GEO gaps from screenshots and live pages"
+  default_prompt: "Use $geo-website-audit with my $geo-company-discovery documents, website screenshots, and URLs to write a page-by-page report with evidence and priority tiers."

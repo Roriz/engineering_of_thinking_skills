@@ -1,6 +1,6 @@
 # Engineering of Thinking Skills 🧠
 
-Personal skills for Claude Code, Google Antigravity, Agents, and Codex. Covers prompt evaluation, edge-case grilling, defect triage, UX specs, multi-perspective reviews, and structured debates.
+Personal skills for Claude Code, Google Antigravity, Agents, and Codex. Covers prompt evaluation, edge-case grilling, defect triage, UX specs, multi-perspective reviews, structured debates, and GEO discovery and audits.
 
 ---
 
@@ -12,6 +12,9 @@ Personal skills for Claude Code, Google Antigravity, Agents, and Codex. Covers p
 | [`tune-against-eval`](skills/tune-against-eval/SKILL.md) | Improves prompts and pipelines against evals using falsifiable hypotheses and isolated single-variable edits | Improving precision/recall/F1, *"why is this failing"*, prompt tuning |
 | [`adversarial-debate`](skills/adversarial-debate/SKILL.md) | Runs a structured debate between two options (Player A vs Player B) with opening pitches, cross-attacks, counters, and an impartial judge verdict | `/debate`, `/compare`, *"debate A vs B"*, binary comparisons |
 | [`dialectic-consensus`](skills/dialectic-consensus/SKILL.md) | Evaluates complex decisions or scores using a 3-perspective jury bench with competing lenses, synthesizing tensions into a clear consensus | `/jury`, `/consensus`, *"evaluate with 3 perspectives"*, multi-angle reviews |
+| [`geo-company-discovery`](skills/geo-company-discovery/SKILL.md) | Builds company, brand, customer, market, and evidence documents from supplied material and a focused interview | GEO onboarding, company knowledge packs, substantiating content claims |
+| [`geo-website-audit`](skills/geo-website-audit/SKILL.md) | Reviews website pages and screenshots against company discovery documents, with evidence and T0–T3 priorities | GEO website readiness, page-by-page critique; requires `geo-company-discovery` output |
+| [`geo-content-audit`](skills/geo-content-audit/SKILL.md) | Reviews blog articles and social posts for audience fit, company alignment, and supported claims | Draft or published content audits; requires `geo-company-discovery` output |
 | [`grilling`](skills/grilling/SKILL.md) | Stress-tests plans and decisions through an interactive design-tree interview | `/grill-me`, *"grill me on this plan"*, stress-testing architecture |
 | [`humanizer`](skills/humanizer/SKILL.md) | Strips AI writing tells, marketing fluff, and robotic syntax based on Wikipedia's AI cleanup guidelines | Making text sound natural and human-written |
 | [`designer-cognitive`](skills/designer-cognitive/SKILL.md) | Runs 6-phase cognitive UX audits, JTBD action decomposition, hierarchy taxonomies, and redesign grilling | UI redesigns, feature integrations, UX audits |
@@ -53,6 +56,18 @@ engineering_of_thinking_skills/
     │   └── SKILL.md
     ├── dialectic-consensus/
     │   └── SKILL.md
+    ├── geo-company-discovery/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   └── references/
+    ├── geo-content-audit/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   └── references/
+    ├── geo-website-audit/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   └── references/
     ├── grilling/
     │   └── SKILL.md
     ├── humanizer/

@@ -1,0 +1,4 @@
+interface:
+  display_name: "GEO Content Audit"
+  short_description: "Audit blog and social content using company discovery"
+  default_prompt: "Use $geo-content-audit with my $geo-company-discovery documents to review these blog articles or social posts and prioritize evidence-backed improvements."

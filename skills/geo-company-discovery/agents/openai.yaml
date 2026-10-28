@@ -1,0 +1,4 @@
+interface:
+  display_name: "GEO Company Discovery"
+  short_description: "Interview a company and build evidence-backed GEO briefs"
+  default_prompt: "Use $geo-company-discovery to review my materials, interview me about the company, and build reusable brand, customer, market, and evidence documents."
